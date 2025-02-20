@@ -1,0 +1,22 @@
+
+# Create conda runtime environment "langchain_apps" for Langchain applications
+conda create --name LangChain_apps --channel conda-forge python=3.12 conda pip 
+
+# Install ipykernel and JupyterLab to run Juptyer Notebooks inside and outside VSCode.
+conda install -c conda-forge ipykernel jupyterlab
+
+# Activate langchain_apps
+conda activate langchain_apps
+
+# Install required packages
+conda install langchain -c conda-forge
+
+# Install LangChain Wrapper OpenAI 
+# PIP Install parameters: 
+#   "q" quiets pip so it is not verbose.  
+#   "U" upgrades it if installed already.
+pip install -qU "langchain[openai]"
+
+# Install "dotenv" for local development purposes 
+pip install -qU python-dotenv
+
