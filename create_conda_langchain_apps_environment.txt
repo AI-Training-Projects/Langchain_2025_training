@@ -20,3 +20,4 @@ pip install -qU "langchain[openai]"
 # Install "dotenv" for local development purposes 
 pip install -qU python-dotenv
 
+conda install -c conda-forge dotenv-python
